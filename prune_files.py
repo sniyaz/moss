@@ -7,6 +7,7 @@ from shutil import copyfile
 import pdb
 
 # NOTE: Edit files for CSE 373 HW7 at UW.
+# TODO: Change this for your courses HW.
 EDIT_FILES = [
     "src/main/java/datastructures/concrete/ArrayDisjointSet.java",
     "src/main/java/misc/graphs/Graph.java",
@@ -38,6 +39,7 @@ def copy_files(submission_dir, out_dir, join_out):
 
         # NOTE: Moss takes the skeleton as a single file. So just join all files
         # into a single one.
+        # TODO: Correct the file extension if you aren't using java.
         cur_join_file = cur_dir + "_join.java"
         cur_join_target = os.path.join(join_out, cur_join_file)
 
