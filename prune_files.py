@@ -6,31 +6,11 @@ from shutil import copyfile
 
 import pdb
 
-# NOTE: Will change from project to project. This is HW2.
-# EDIT_FILES = [
-#     "main/java/datastructures/concrete/DoubleLinkedList.java",
-#     "test/java/datastructures/TestDeleteFunctionality.java",
-#     "test/java/datastructures/TestDeleteStress.java",
-#     "main/java/datastructures/concrete/dictionaries/ArrayDictionary.java",
-#     "main/java/calculator/ast/ExpressionManipulators.java"
-# ]
-
-# NOTE: Edit files for HW5.
-# EDIT_FILES = [
-#     "main/java/datastructures/concrete/ArrayHeap.java",
-#     "main/java/misc/Searcher.java",
-#     "test/java/datastructures/sorting/TestArrayHeapFunctionality.java",
-#     "test/java/datastructures/sorting/TestSortingStress.java",
-#     "test/java/datastructures/sorting/TestTopKSortFunctionality.java",
-#     "main/java/search/analyzers/TfIdfAnalyzer.java",
-#     "main/java/search/analyzers/PageRankAnalyzer.java"
-# ]
-
-# NOTE: Edit files for HW7.
+# NOTE: Edit files for CSE 373 HW7 at UW.
 EDIT_FILES = [
-    "main/java/datastructures/concrete/ArrayDisjointSet.java",
-    "main/java/misc/graphs/Graph.java",
-    "main/java/mazes/generators/maze/KruskalMazeCarver.java"
+    "src/main/java/datastructures/concrete/ArrayDisjointSet.java",
+    "src/main/java/misc/graphs/Graph.java",
+    "src/main/java/mazes/generators/maze/KruskalMazeCarver.java"
 ]
 
 def copy_files(submission_dir, out_dir, join_out):
@@ -47,8 +27,7 @@ def copy_files(submission_dir, out_dir, join_out):
         student_files = []
 
         for cur_edit_file in EDIT_FILES:
-            cur_edit_path = os.path.join(full_dir, "src")
-            cur_edit_path = os.path.join(cur_edit_path, cur_edit_file)
+            cur_edit_path = os.path.join(full_dir, cur_edit_file)
 
             # Copy this edit file over.
             edit_basename = os.path.basename(cur_edit_file)
